@@ -45,7 +45,7 @@ Campus-Connect/
 │   ├── tailwind.config.js  # Styling configuration
 │   └── vite.config.js      # Build tool configuration
 └── package.json
-
+```
 # 🛠️ Getting Started
 ## Prerequisites
 Node.js (v16.x or higher)
