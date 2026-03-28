@@ -10,6 +10,28 @@
 https://camigo.onrender.com/login
 ```
 
+## 📄 API Documentation (Swagger)
+
+This project provides interactive API documentation using **Swagger UI**, allowing you to explore and test all endpoints directly from your browser.
+
+### 🚀 Access Swagger UI
+
+After starting the backend server, open:
+```
+http://localhost:3001/api-docs
+```
+---
+
+## ✨ Features
+
+- 📌 View all API endpoints in one place  
+- 🧪 Test APIs directly from the browser  
+- 🔐 Supports authentication (cookies/JWT)  
+- 📦 Organized modules (Auth, Users, Chat)  
+- 🧾 Request & response examples  
+
+---
+
 ## 🏗️ Project Architecture
 
 The project is divided into two main environments: a **Node.js/Express** backend and a **React/Vite** frontend.
