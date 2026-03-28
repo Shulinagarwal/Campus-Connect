@@ -1,32 +1,36 @@
-const swaggerJsdoc = require('swagger-jsdoc');
+const swaggerJsDoc = require("swagger-jsdoc");
 
 const options = {
   definition: {
-    openapi: '3.0.0',
+    openapi: "3.0.0",
     info: {
-      title: 'Campus Connect API',
-      version: '1.0.0',
-      description: 'API documentation for the Campus Connect internship project',
+      title: "Campus Connect API",
+      version: "1.0.0",
+      description: "API documentation for Campus Connect backend",
     },
     servers: [
       {
-        url: `http://localhost:${process.env.PORT || 5000}`, // Dynamic port
+        url: "http://localhost:3001",
       },
     ],
-    // ADD THIS for JWT support in the UI
     components: {
       securitySchemes: {
-        bearerAuth: {
-          type: 'http',
-          scheme: 'bearer',
-          bearerFormat: 'JWT',
+        cookieAuth: {
+          type: "apiKey",
+          in: "cookie",
+          name: "jwt",
         },
       },
     },
+    security: [
+      {
+        cookieAuth: [],
+      },
+    ],
   },
-  // FIX: Added .route.js to match your file naming convention
-  apis: ['./src/routes/*.route.js', './routes/*.route.js'], 
+ apis: ["./src/routes/*.js"], // path to your routes
 };
 
-const specs = swaggerJsdoc(options);
-module.exports = specs;
+const swaggerSpec = swaggerJsDoc(options);
+
+module.exports = swaggerSpec;

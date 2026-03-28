@@ -8,6 +8,8 @@ const userRoutes = require("./routes/user.route");
 const chatRoutes = require("./routes/chat.route");
 const cors = require("cors");
 const path = require("path");
+const swaggerUi = require("swagger-ui-express");
+const swaggerSpec = require("./swagger");
 
 dotenv.config();
 
@@ -19,13 +21,14 @@ const rootDir = path.resolve();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin: "https://campus-connect-drab-rho.vercel.app",
+  origin: true,
   credentials: true,
 }));
-
+app.options("*", cors());
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/chats", chatRoutes);
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.get("/me" , protectRoute, (req, res) => {
   res.status(200).json({ success: "true", user: req.user });

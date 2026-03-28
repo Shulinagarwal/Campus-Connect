@@ -4,6 +4,25 @@ const protectRoute = require("../../middleware/auth.middleware");
 
 const router = express.Router();
 
-router.get("/token",protectRoute, getStreamToken);
+/**
+ * @swagger
+ * tags:
+ *   name: Chat
+ *   description: Chat APIs
+ */
+
+/**
+ * @swagger
+ * /api/chats/token:
+ *   get:
+ *     summary: Get Stream token
+ *     tags: [Chat]
+ *     security:
+ *       - cookieAuth: []
+ *     responses:
+ *       200:
+ *         description: Stream token returned
+ */
+router.get("/token", protectRoute, getStreamToken);
 
 module.exports = router;
