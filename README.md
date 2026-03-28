@@ -58,13 +58,20 @@ MongoDB (Local or Atlas)
 Clone the repository:
 
 ## Bash
+```
 git clone [https://github.com/Shulinagarwal/Campus-Connect.git](https://github.com/Shulinagarwal/Campus-Connect.git)
-```cd Campus-Connect```
+
+cd Campus-Connect
+```
 Configure Backend:
-```cd backend```
-```npm install```
+```
+cd backend
+npm install
+```
 # Create a .env file and add your MONGO_URI and JWT_SECRET
-```npm start```
+```
+npm start
+```
 Configure Frontend:
 
 ```cd ../frontend
