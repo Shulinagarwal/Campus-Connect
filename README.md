@@ -59,20 +59,18 @@ Clone the repository:
 
 ## Bash
 git clone [https://github.com/Shulinagarwal/Campus-Connect.git](https://github.com/Shulinagarwal/Campus-Connect.git)
-cd Campus-Connect
+```cd Campus-Connect```
 Configure Backend:
-
-Bash
-cd backend
-npm install
+```cd backend```
+```npm install```
 # Create a .env file and add your MONGO_URI and JWT_SECRET
-npm start
+```npm start```
 Configure Frontend:
 
-Bash
-cd ../frontend
+```cd ../frontend
 npm install
 npm run dev
+```
 ## 🚀 Key Features
 Secure Authentication: JWT-based login and registration flow.
 
