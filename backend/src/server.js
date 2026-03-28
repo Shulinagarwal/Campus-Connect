@@ -19,7 +19,7 @@ const rootDir = path.resolve();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin: "https://campus-connect-drab-rho.vercel.app/",
+  origin: "https://campus-connect-drab-rho.vercel.app",
   credentials: true,
 }));
 
