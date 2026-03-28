@@ -78,6 +78,16 @@ Configure Frontend:
 npm install
 npm run dev
 ```
+
+## Env Configuration
+```
+PORT=3001
+MONGO_URI=your_mongodb_uri
+STREAM_API_KEY=your_stream_key
+STREAM_API_SECRET=your_stream_secret
+JWT_SECRET_KEY=your_secret_phrase
+NODE_ENV=development
+```
 ## 🚀 Key Features
 Secure Authentication: JWT-based login and registration flow.
 
@@ -99,3 +109,4 @@ Commit your Changes (git commit -m 'Add some NewFeature').
 Push to the Branch (git push origin feature/NewFeature).
 
 Open a Pull Request.
+
