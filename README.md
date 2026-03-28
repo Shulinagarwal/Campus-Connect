@@ -110,3 +110,14 @@ Push to the Branch (git push origin feature/NewFeature).
 
 Open a Pull Request.
 
+## 📈 Scalability & Future Enhancements
+To handle a growing campus population, the following architectural improvements are planned:
+
+- **Microservices**: Decoupling the Chat and User services into independent microservices to allow independent scaling.
+
+- **Caching**: Implementing Redis caching for frequently accessed data like user profiles and active chat sessions to reduce DB load.
+
+- **Load Balancing**: Deploying with NGINX or AWS ELB to distribute incoming traffic across multiple server instances.
+
+- **Database Optimization**: Implementing indexing on frequently searched fields (like username or email) and considering database sharding for large datasets.
+
